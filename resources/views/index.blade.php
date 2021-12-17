@@ -4,7 +4,7 @@
  
  <div class="drawer" id="grid-drawer-{{ $name }}">
     <div class="drawer-modal"></div>
-     <div class="drawer-content {{ $position }}" style="{{ $position }} : -{{ $size }}">
+     <div class="drawer-content {{ $position }}" style="{{ $position }} : -{{ $size }}; {{ in_array($position, ['left', 'right']) ? 'width' : 'height' }}: {{ $size }}">
         <div class="drawer-header">
             <button type="button" class="close drawer-close-{{ $name }}" data-dismiss="drawer" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="drawer-title">{{ $title }}</h4>
