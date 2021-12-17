@@ -1,0 +1,33 @@
+{
+    "name": "laravel-admin-ext/drawer",
+    "description": "抽屉",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/laravel-admin-ext/drawer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "penglin",
+            "email": "plin@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pling\\Drawer\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pling\\Drawer\\DrawerServiceProvider"
+            ]
+        }
+    }
+}
