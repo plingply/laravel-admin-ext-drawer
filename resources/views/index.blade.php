@@ -1,8 +1,8 @@
-<span class="{{ $class }}" data-toggle="drawer" data-url="{{ $url }}" data-id="#grid-drawer-{{ $name }}" id="grid-drawer-{{ $name }}-btn" data-key="{{ $key }}">
+<span class="{{ $class }} grid-drawer-{{ $name }}-btn" data-toggle="drawer" data-url="{{ $url }}" data-key="{{ $key }}">
     <a href="javascript:void(0)">{!! $value !!}</a>
  </span>
  
- <div class="drawer" id="grid-drawer-{{ $name }}">
+ <div class="drawer" class="grid-drawer-{{ $name }}">
     <div class="drawer-modal"></div>
      <div class="drawer-content {{ $position }}" style="{{ $position }} : -{{ $size }}; {{ in_array($position, ['left', 'right']) ? 'width' : 'height' }}: {{ $size }}">
         <div class="drawer-header">
@@ -106,9 +106,9 @@
 
  <script>
 
-     var drawer = $('#grid-drawer-{{ $name }}');
+     var drawer = $('.grid-drawer-{{ $name }}');
      var drawerBody = drawer.find('.drawer-body');
-     var drawerBtn = $('#grid-drawer-{{ $name }}-btn')
+     var drawerBtn = $('.grid-drawer-{{ $name }}-btn')
      var closeBtn = $(".drawer-close-{{ $name }}")
 
      var load = function (url) {
