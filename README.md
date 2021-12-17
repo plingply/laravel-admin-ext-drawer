@@ -7,7 +7,7 @@ TsetDrawer 实现 BaseDrawer
 
 1 页面任意点使用: 
 
-$html = (new ButtonDrawer(TsetDrawer::class))->render();
+$html = (new ButtonDrawer(TsetDrawer::class, $var))->render();
 
 2 grid使用
 
