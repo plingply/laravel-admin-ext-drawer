@@ -2,8 +2,8 @@
     "name": "laravel-admin-ext/drawer",
     "description": "抽屉",
     "type": "library",
-    "keywords": ["laravel-admin", "extension"],
-    "homepage": "https://github.com/laravel-admin-ext/drawer",
+    "keywords": ["laravel-admin", "extension", "drawer"],
+    "homepage": "https://github.com/plingply/laravel-admin-ext-drawer.git",
     "license": "MIT",
     "authors": [
         {
