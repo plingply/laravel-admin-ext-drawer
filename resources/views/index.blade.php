@@ -6,8 +6,8 @@
     <div class="drawer-modal"></div>
      <div class="drawer-content {{ $position }}" style="{{ $position }} : -{{ $size }}; {{ in_array($position, ['left', 'right']) ? 'width' : 'height' }}: {{ $size }}">
         <div class="drawer-header">
-            <button type="button" class="close drawer-close-{{ $name }}" data-dismiss="drawer" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="drawer-title">{{ $title }}</h4>
+            <button type="button" class="close drawer-close-{{ $name }}" data-dismiss="drawer" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="drawer-body">
             {!! $html !!}
@@ -45,7 +45,7 @@
         .drawer-content{
             position: absolute;
             background-color: #fff;
-            padding: 16px;
+            padding: 0;
             box-sizing: border-box;
             transition: all .3s;
      }
@@ -80,12 +80,17 @@
 
      .drawer-title{
          margin-top: 0;
-         font-size: 16px;
+         font-size: 14px;
          color: #333;
+         margin-bottom: 0;
      }
 
      .drawer-header{
-         height: 24px;
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 8px;
      }
 
      .drawer-body{
