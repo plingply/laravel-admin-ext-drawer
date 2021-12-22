@@ -1,19 +1,21 @@
-<span class="{{ $class }} grid-drawer-{{ $name }}-btn" data-toggle="drawer" data-url="{{ $url }}" data-key="{{ $key }}">
-    <a href="javascript:void(0)">{!! $value !!}</a>
- </span>
- 
- <div class="drawer" class="grid-drawer-{{ $name }}">
-    <div class="drawer-modal"></div>
-     <div class="drawer-content {{ $position }}" style="{{ $position }} : -{{ $size }}; {{ in_array($position, ['left', 'right']) ? 'width' : 'height' }}: {{ $size }}">
-        <div class="drawer-header">
-            <h4 class="drawer-title">{{ $title }}</h4>
-            <button type="button" class="close drawer-close-{{ $name }}" data-dismiss="drawer" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<div class="drawer-box">
+    <span class="{{ $class }} grid-drawer-{{ $name }}-btn" data-toggle="drawer" data-url="{{ $url }}" data-key="{{ $key }}">
+        <a href="javascript:void(0)">{!! $value !!}</a>
+     </span>
+     
+     <div class="drawer grid-drawer-{{ $name }}">
+        <div class="drawer-modal"></div>
+         <div class="drawer-content {{ $position }}" style="{{ $position }} : -{{ $size }}; {{ in_array($position, ['left', 'right']) ? 'width' : 'height' }}: {{ $size }}">
+            <div class="drawer-header">
+                <h4 class="drawer-title">{{ $title }}</h4>
+                <button type="button" class="close drawer-close-{{ $name }}" data-dismiss="drawer" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="drawer-body">
+                {!! $html !!}
+            </div>
         </div>
-        <div class="drawer-body">
-            {!! $html !!}
-        </div>
-    </div>
- </div>
+     </div>
+</div>
 
  <style>
      .drawer{
@@ -106,8 +108,9 @@
 
  <script>
 
-     var drawer = $('.grid-drawer-{{ $name }}');
+     var drawer = $($('.grid-drawer-{{ $name }}')[0]);
      var drawerBody = drawer.find('.drawer-body');
+
      var drawerBtn = $('.grid-drawer-{{ $name }}-btn')
      var closeBtn = $(".drawer-close-{{ $name }}")
 
