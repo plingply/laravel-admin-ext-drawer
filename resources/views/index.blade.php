@@ -17,6 +17,26 @@
      </div>
 </div>
 
+<script>
+    setDrawerSize()
+    $(window).on('resize', function() {
+        setDrawerSize()
+    })
+
+    function setDrawerSize(){
+        var key = 'height'
+        if(['left', 'right'].indexOf("{{ $position }}") > -1 ) {
+            var key = 'width'
+        }
+        console.log('m', key)
+        if(document.documentElement.clientWidth < 760){
+            $(".drawer-content").css(key, "98%");
+        }else {
+            $(".drawer-content").css(key, "{{ $size }}");
+        }
+    }
+</script>
+
  <style>
      .drawer{
          width: 100%;
